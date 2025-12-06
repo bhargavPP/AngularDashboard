@@ -1,0 +1,14 @@
+{
+    "tenants": [
+        {
+            "id": "tenant1",
+            "name": "Tenant One",
+            "connectionString": "Server=(localdb)\\MSSQLLocalDB;Database=Tenant1_Db;Trusted_Connection=True;"
+        },
+        {
+            "id": "tenant2",
+            "name": "Tenant Two",
+            "connectionString": "Server=(localdb)\\MSSQLLocalDB;Database=Tenant2_Db;Trusted_Connection=True;"
+        }
+    ]
+}
