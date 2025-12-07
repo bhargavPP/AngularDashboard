@@ -1,0 +1,15 @@
+.trend-card {
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 8px;
+}
+
+.label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.current-value {
+  font-size: 32px;
+  font-weight: bold;
+}

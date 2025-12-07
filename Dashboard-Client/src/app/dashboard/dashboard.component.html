@@ -27,6 +27,52 @@
       </div>
     </div>
   </div>
+  <div class="row mt-4">
+
+    <div class="col-lg-4">
+      <app-trend-widget title="Revenue"
+                        [current]="25000"
+                        [previous]="18000">
+      </app-trend-widget>
+    </div>
+
+    <div class="col-lg-4">
+      <app-funnel-widget [steps]="[
+        { label: 'Visitors', value: 4500 },
+        { label: 'Signups', value: 900 },
+        { label: 'Active Users', value: 400 }
+      ]">
+      </app-funnel-widget>
+    </div>
+
+    <div class="col-lg-4">
+      <app-realtime-kpi label="Live Users"
+                        [value]="120"
+                        [refreshRate]="3000">
+      </app-realtime-kpi>
+    </div>
+  </div>
+
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <app-top-performers [items]="[
+        { name: 'Product A', value: 92 },
+        { name: 'Product B', value: 81 },
+        { name: 'Product C', value: 65 }
+      ]">
+      </app-top-performers>
+    </div>
+
+    <div class="col-md-6">
+      <app-timeline-widget [events]="[
+        { time: '10:15 AM', desc: 'User John logged in.' },
+        { time: '10:18 AM', desc: 'Order #205 created.' },
+        { time: '10:25 AM', desc: 'Payment failed for User Lisa.' }
+      ]">
+      </app-timeline-widget>
+    </div>
+  </div>
 
   <!-- Charts Section -->
   <div class="row g-4">

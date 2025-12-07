@@ -1,0 +1,7 @@
+<div class="trend-card card shadow-sm p-3">
+  <div class="label">{{ title }}</div>
+  <div class="current-value">{{ current | number }}</div>
+  <div class="growth" [class]="growthClass">
+    {{ growth | number:'1.0-1' }}% {{ growthText }} vs last month
+  </div>
+</div>

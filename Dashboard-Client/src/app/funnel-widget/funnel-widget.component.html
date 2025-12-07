@@ -1,0 +1,16 @@
+<div class="funnel card shadow-sm p-3">
+  <div class="title">Conversion Funnel</div>
+
+  <div class="step" *ngFor="let s of steps">
+    <div class="label">{{ s.label }}</div>
+    <div class="value">{{ s.value | number }}</div>
+
+    <div class="bar">
+      <div class="fill" [style.width.%]="(s.value / steps[0].value) * 100"></div>
+    </div>
+  </div>
+
+  <div class="final-rate mt-2">
+    Final Conversion: <b>{{ conversionRate | number:'1.0-1' }}%</b>
+  </div>
+</div>

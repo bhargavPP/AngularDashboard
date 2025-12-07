@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './auth/login.component';
 import { AuthCallbackComponent } from './auth/auth-callback.component';
 import { MainLayoutComponent } from './layout/main-layout.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+ 
 
 import { AuthInterceptor } from './core/auth.interceptor';
 import { ReportsComponent } from './reports/reports.component';
@@ -18,6 +18,7 @@ import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
 
 import {ThemeService} from "./core/theme.service";
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,6 @@ import {ThemeService} from "./core/theme.service";
     LoginComponent,
     AuthCallbackComponent,
     MainLayoutComponent,
-    DashboardComponent,
     ReportsComponent,
     ProductsComponent,
     UsersComponent
@@ -35,6 +35,7 @@ import {ThemeService} from "./core/theme.service";
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    DashboardModule,
     OAuthModule.forRoot({
       resourceServer: {
         allowedUrls: ['https://localhost:7243/api'],
