@@ -17,6 +17,8 @@ import { ReportsComponent } from './reports/reports.component';
 import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
 
+import {ThemeService} from "./core/theme.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,4 +47,8 @@ import { UsersComponent } from './users/users.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private themeService: ThemeService) {
+    this.themeService.init();
+  }
+}

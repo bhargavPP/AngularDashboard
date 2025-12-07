@@ -1,36 +1,57 @@
-<h2 class="mb-4">Overview</h2>
+<div class="container-fluid">
 
-<div class="row g-4">
-
-  <div class="col-md-3" *ngFor="let tile of tiles">
-    <div class="card shadow-sm">
-      <div class="card-body text-center">
-        <h6 class="text-muted">{{ tile.name }}</h6>
-        <h2>{{ tile.value }}</h2>
+  <!-- KPI Tiles -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-3">
+      <div class="tile bg-primary text-white">
+        <h6>Total Users</h6>
+        <h2>1,245</h2>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="tile bg-success text-white">
+        <h6>Total Orders</h6>
+        <h2>358</h2>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="tile bg-warning text-white">
+        <h6>Pending Shipments</h6>
+        <h2>42</h2>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="tile bg-danger text-white">
+        <h6>Failed Payments</h6>
+        <h2>5</h2>
       </div>
     </div>
   </div>
 
-</div>
+  <!-- Charts Section -->
+  <div class="row g-4">
 
-<h3 class="mt-5 mb-3">Products</h3>
+    <div class="col-lg-6">
+      <div class="card shadow-sm p-3">
+        <h5>Revenue Trends</h5>
+        <canvas id="revenueChart"></canvas>
+      </div>
+    </div>
 
-<div class="card shadow-sm">
-  <div class="card-body">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th style="width: 120px;">Price</th>
-        </tr>
-      </thead>
+    <div class="col-lg-6">
+      <div class="card shadow-sm p-3">
+        <h5>Product Sales</h5>
+        <canvas id="salesBarChart"></canvas>
+      </div>
+    </div>
 
-      <tbody>
-        <tr *ngFor="let p of products">
-          <td>{{ p.name }}</td>
-          <td>{{ p.price | currency }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="col-lg-6 mt-4">
+      <div class="card shadow-sm p-3">
+        <h5>Category Distribution</h5>
+        <canvas id="categoryDonutChart"></canvas>
+      </div>
+    </div>
+
   </div>
+
 </div>

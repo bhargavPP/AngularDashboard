@@ -1,0 +1,15 @@
+.tile {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+  .tile h6 {
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+
+  .tile h2 {
+    font-weight: bold;
+    margin: 0;
+  }

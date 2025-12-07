@@ -23,7 +23,11 @@
         <a routerLink="/users" class="nav-link text-white">👥 Users</a>
       </li>
     </ul>
-
+    <!-- Theme toggle -->
+    <button class="btn btn-outline-secondary btn-sm me-2" (click)="toggleTheme()" [attr.aria-pressed]="theme === 'dark'">
+      <span *ngIf="theme === 'dark'">☀️ Light</span>
+      <span *ngIf="theme === 'light'">🌙 Dark</span>
+    </button>
     <button class="btn btn-danger mt-4 w-100" (click)="logout()">
       Logout
     </button>

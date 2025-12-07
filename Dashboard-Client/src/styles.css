@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+/* default (light) theme variables */
+:root {
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --text: #212529;
+  --muted: #6c757d;
+  --primary: #0d6efd;
+  --success: #198754;
+  --danger: #dc3545;
+  --card-shadow: 0 1px 3px rgba(16,24,40,0.04);
+  --tile-bg: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.7));
+}
+
+/* dark theme overrides */
+body.theme-dark {
+  --bg: #0b1220;
+  --surface: #0f1724;
+  --text: #e6eef6;
+  --muted: #98a0b3;
+  --primary: #4f8cff;
+  --success: #2ec49f;
+  --danger: #ff7b88;
+  --card-shadow: 0 4px 18px rgba(3,7,18,0.6);
+  --tile-bg: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+/* Layout styles using variables */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card, .tile {
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+  color: var(--text);
+}
+
+.navbar, #sidebar {
+  background: var(--surface);
+  color: var(--text);
+}
+
+/* KPIs */
+.tile h6 {
+  color: var(--muted);
+}
+
+.tile h2 {
+  color: var(--text);
+}
+
+/* buttons using variables */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* small helper for chart canvas container */
+.chart-card {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: .5rem;
+}
